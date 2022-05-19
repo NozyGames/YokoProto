@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7161107673802437320}
   - component: {fileID: 7019499942162492862}
   - component: {fileID: 8718361043234311670}
+  - component: {fileID: 2127352994142716604}
   m_Layer: 0
   m_Name: PLright
   m_TagString: Yoko
@@ -121,5 +122,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bf5e69f001d9749a87db4141a08216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Kyoko:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &2127352994142716604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999637366412050271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434775409fa552340a78bdc08bc991f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
