@@ -5,16 +5,17 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
 
+    public static GridManager Instance;
+
     [SerializeField] private int gridWidth, gridHeight; //dimensions de la grille
     [SerializeField] private Tiles tilePrefab;
     [SerializeField] private Transform cameraTransform;
 
     private Dictionary<Vector3, Tiles> tilesDictionnary; // Dictionnaire pour accéder aux tiles
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        GenerateGrid();
+        Instance = this;
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class GridManager : MonoBehaviour
         
     }
 
-    void GenerateGrid()
+    public void GenerateGrid()
     {
         tilesDictionnary = new Dictionary<Vector3, Tiles>(); //Créer le nouveau dictionnaire
 
@@ -42,6 +43,8 @@ public class GridManager : MonoBehaviour
         }
 
         cameraTransform.transform.position = new Vector3((float)gridWidth / 2 - 0.5f, (float)gridHeight / 2 - 0.5f, -10); //Centrer cam sur la grille
+
+        GameManager.Instance.ChangeState(GameManager.GameState.GenerateEnemiesKyoko ); //passage au spawn de Kyoko
     }
 
     public Tiles GetTileAtPosition(Vector2 pos) // fonction a appeler pour obtenir une tile à telle pos
