@@ -5,23 +5,22 @@ using UnityEngine;
 public class YokoMove : MonoBehaviour
 {
     public float moveTime;
-    public GameObject[] Yoko;
+    public GameObject Yoko;
     public int moveBy = 1;
     public bool isGameStarted;
     void Start()
     {
-        Yoko = GameObject.FindGameObjectsWithTag("Yoko");
+        //Je récupère mon objet Yoko (qui sera en l'occurrence le "Loader") via le tag "Yoko"
+        Yoko = GameObject.FindGameObjectWithTag("Yoko");
         moveTime = 1;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //Si "moveTime" est à 0 ou inférieur et que le bouton a été appuyé, je déplace mon objet Yoko de "moveBy" (int modifiable) en x
         if (moveTime <= 0 && isGameStarted)
         {
-            Yoko[0].transform.Translate(moveBy, 0, 0);
-            Yoko[1].transform.Translate(moveBy, 0, 0);
-            Yoko[2].transform.Translate(moveBy, 0, 0);
+            Yoko.transform.Translate(moveBy, 0, 0);
             moveTime = 1;
         }
         else moveTime -= Time.deltaTime;
