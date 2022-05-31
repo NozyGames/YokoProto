@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5946817383609400727}
   - component: {fileID: 1871693828304287043}
   - component: {fileID: -1691557553241915232}
-  - component: {fileID: 4605811307474954285}
-  m_Layer: 0
+  - component: {fileID: 2010936209}
+  m_Layer: 3
   m_Name: AIdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
---- !u!114 &4605811307474954285
+--- !u!114 &2010936209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,9 +120,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8187219755454104489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 935b72e54b5774d4ea4c7b7f47049d82, type: 3}
+  m_Script: {fileID: 11500000, guid: 21610d2bb8af4c14fbcadce024ad1550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Yoko:
+  hitLayer:
     serializedVersion: 2
     m_Bits: 64
+  direction: 1

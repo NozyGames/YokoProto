@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5338328697683693721}
   - component: {fileID: 1933744763573361999}
   - component: {fileID: 3920206699846868316}
-  - component: {fileID: 2164809803657769089}
-  m_Layer: 0
+  - component: {fileID: 641950547}
+  m_Layer: 3
   m_Name: AIup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
---- !u!114 &2164809803657769089
+--- !u!114 &641950547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,9 +120,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7050810660274806888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19d01b2362832df4190bc9a914a8d2c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 21610d2bb8af4c14fbcadce024ad1550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Yoko:
+  hitLayer:
     serializedVersion: 2
     m_Bits: 64
+  direction: 0

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1470232101636450263}
   - component: {fileID: 7245601212722714320}
   - component: {fileID: -4402419533730406764}
-  - component: {fileID: 8476104161604825900}
   - component: {fileID: 1811382698549800200}
-  m_Layer: 0
+  - component: {fileID: 1391364843}
+  m_Layer: 6
   m_Name: PLup
   m_TagString: Yoko
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8638780831799865005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.59, y: -1.64, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 589122cbb39b9c94e9a043aacdd6a32a, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 214b3d189d8828b4e80bd7ea1e546dd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,30 +103,15 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
---- !u!114 &8476104161604825900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8638780831799865005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0016827c2f2949243ae4dea5c991211d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Kyoko:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!114 &1811382698549800200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +124,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434775409fa552340a78bdc08bc991f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1391364843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8638780831799865005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21610d2bb8af4c14fbcadce024ad1550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  direction: 0

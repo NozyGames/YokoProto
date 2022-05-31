@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5798212822176231076}
   - component: {fileID: 3806157657925320377}
   - component: {fileID: 1355511142224048483}
-  - component: {fileID: 1981914567537661666}
-  m_Layer: 0
+  - component: {fileID: 769227756}
+  m_Layer: 3
   m_Name: AIleft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
---- !u!114 &1981914567537661666
+--- !u!114 &769227756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,9 +120,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3246705096696863926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3854c6ecbc1e0f5499f7a247c404faee, type: 3}
+  m_Script: {fileID: 11500000, guid: 21610d2bb8af4c14fbcadce024ad1550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Yoko:
+  hitLayer:
     serializedVersion: 2
     m_Bits: 64
+  direction: 2
