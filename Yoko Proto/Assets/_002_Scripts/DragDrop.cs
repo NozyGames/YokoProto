@@ -42,7 +42,7 @@ public class DragDrop : MonoBehaviour
         for (int i = 0; i < tileBase.Length; i++)
         {
             Tile tileda = (Tile)tileBase[i];
-            Bounds bound = new Bounds(tileda.transform[0, 3], tileda.transform[1, 3], 0, tileda.transform[0, 2], tileda.transform[1, 2]);
+            //Bounds bound = new Bounds(tileda.transform[0, 3], tileda.transform[1, 3], 0, tileda.transform[0, 2], tileda.transform[1, 2]);
         }
     }
     Vector3 GetMousePos()
@@ -51,5 +51,17 @@ public class DragDrop : MonoBehaviour
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         return mousePos;
+    }
+
+    private void Test()
+    {
+        Tilemap _t = new Tilemap();
+        TileBase[] _tb = _t.GetTilesBlock(new BoundsInt(new Vector3Int(0, 0, 0), new Vector3Int(5, 5, 0)));
+
+        for (int i = 0; i < 25; i++)
+        {
+            Tile _ti = (Tile)_tb[i];
+            //Vector3 _tpos = _ti.transform.GetPosition();
+        }
     }
 }
