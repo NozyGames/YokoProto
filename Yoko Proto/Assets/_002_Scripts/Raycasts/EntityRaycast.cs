@@ -68,14 +68,17 @@ public class EntityRaycast : MonoBehaviour
     }
     public void OnDestroy()
     {
-        YokoMove.Instance.RemoveEntity(this);
-        YokoMove.Instance.RemoveYoko(gameObject);
+        YokoMove.Instance?.RemoveEntity(this);
+        YokoMove.Instance?.RemoveYoko(gameObject);
     }
     public bool IsBlocked()
     {
         RaycastHit2D blocker = Physics2D.Raycast(transform.position + (Vector3.right * 1), transform.position + (Vector3.right * 1.2f), 1);
-        Debug.Log(blocker.transform.name + " blocked: " + name);
-        if (blocker.transform == transform) return false;
+        if (blocker)
+        {
+            Debug.Log(blocker.transform.name + " blocked: " + name);
+            if (blocker.transform == transform) return false;
+        }
         return blocker;
     }
 }
