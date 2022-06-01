@@ -15,9 +15,8 @@ public class DragDrop : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Start");
         //Je récupère "Loader" via son component "YokoMove"
-        Yoko = gameObject.GetComponentInParent<YokoMove>();
+        Yoko = FindObjectOfType<YokoMove>();
         tileBase = highlitedTilemap.GetTilesBlock(highlitedTilemap.cellBounds);
     }
     private void Awake()
@@ -27,7 +26,6 @@ public class DragDrop : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        Vector3 startPos = transform.position;
         //Tant que le bouton n'est pas appuyé, je set "dragOffset"
         if (!Yoko.isGameStarted) dragOffset = transform.position - GetMousePos();
     }
@@ -42,7 +40,23 @@ public class DragDrop : MonoBehaviour
         for (int i = 0; i < tileBase.Length; i++)
         {
             Tile tileda = (Tile)tileBase[i];
-            //Bounds bound = new Bounds(tileda.transform[0, 3], tileda.transform[1, 3], 0, tileda.transform[0, 2], tileda.transform[1, 2]);
+            Tilemap tHigh = new Tilemap();
+            tHigh = highlitedTilemap;
+            TileBase[] tbHigh = tHigh.GetTilesBlock(new BoundsInt(new Vector3Int(0, 0, 0), new Vector3Int(5, 5, 0)));
+
+            for (int d = 0; d < tbHigh.Length; d++)
+            {
+                Tile _ti = (Tile)tbHigh[d];
+                Vector3 _tpos = _ti.transform.GetPosition();
+                Vector3 _tscale = _ti.transform.lossyScale;
+
+                Bounds _b = new Bounds(_tpos, _tscale);
+
+                if (_b.Contains(transform.position))
+                {
+                    plPos.Set(_tpos.x, _tpos.y, 0);
+                }
+            }
         }
     }
     Vector3 GetMousePos()
@@ -51,17 +65,5 @@ public class DragDrop : MonoBehaviour
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         return mousePos;
-    }
-
-    private void Test()
-    {
-        Tilemap _t = new Tilemap();
-        TileBase[] _tb = _t.GetTilesBlock(new BoundsInt(new Vector3Int(0, 0, 0), new Vector3Int(5, 5, 0)));
-
-        for (int i = 0; i < 25; i++)
-        {
-            Tile _ti = (Tile)_tb[i];
-            //Vector3 _tpos = _ti.transform.GetPosition();
-        }
     }
 }
