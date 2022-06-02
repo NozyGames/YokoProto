@@ -12,12 +12,12 @@ public class DragDrop : MonoBehaviour
     [SerializeField]
     private Tilemap highlitedTilemap;
     private TileBase[] tileBase;
+    private Vector3 startPos;
 
     private void Start()
     {
         //Je récupère "Loader" via son component "YokoMove"
         Yoko = FindObjectOfType<YokoMove>();
-        tileBase = highlitedTilemap.GetTilesBlock(highlitedTilemap.cellBounds);
     }
     private void Awake()
     {
@@ -26,6 +26,7 @@ public class DragDrop : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        startPos = transform.position;
         //Tant que le bouton n'est pas appuyé, je set "dragOffset"
         if (!Yoko.isGameStarted) dragOffset = transform.position - GetMousePos();
     }
@@ -37,27 +38,29 @@ public class DragDrop : MonoBehaviour
     private void OnMouseUp()
     {
         Vector3 plPos = transform.position;
-        for (int i = 0; i < tileBase.Length; i++)
+        Tilemap tHigh = new Tilemap();
+        tHigh = highlitedTilemap;
+        TileBase[] tbHigh = tHigh.GetTilesBlock(new BoundsInt(new Vector3Int(0, 0, 0), new Vector3Int(5, 5, 0)));
+
+        //for (int d = 0; d < tbHigh.Length; d++)
+        foreach(Tile highlited in tbHigh)
         {
-            Tile tileda = (Tile)tileBase[i];
-            Tilemap tHigh = new Tilemap();
-            tHigh = highlitedTilemap;
-            TileBase[] tbHigh = tHigh.GetTilesBlock(new BoundsInt(new Vector3Int(0, 0, 0), new Vector3Int(5, 5, 0)));
+            Tile _ti = highlited;//(Tile)tbHigh[d];
+            Vector3 _tpos = _ti.transform.GetPosition();
+            Vector3 _tscale = _ti.transform.lossyScale;
+            Vector3Int _tposint = Vector3Int.FloorToInt(_tpos);
+            Vector3 worldposcell = highlitedTilemap.CellToWorld(_tposint);
 
-            for (int d = 0; d < tbHigh.Length; d++)
+            Bounds _b = new Bounds(_tpos, _tscale);
+            plPos.Set(worldposcell.x, worldposcell.y, 0);
+
+            if (_b.Contains(transform.position))
             {
-                Tile _ti = (Tile)tbHigh[d];
-                Vector3 _tpos = _ti.transform.GetPosition();
-                Vector3 _tscale = _ti.transform.lossyScale;
-
-                Bounds _b = new Bounds(_tpos, _tscale);
-
-                if (_b.Contains(transform.position))
-                {
-                    plPos.Set(_tpos.x, _tpos.y, 0);
-                }
+                transform.position = plPos;
             }
-        }
+            else transform.position = startPos;
+            Debug.Log("worldposcell = " + worldposcell);
+        } 
     }
     Vector3 GetMousePos()
     {
