@@ -210,6 +210,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1588,6 +1589,69 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      00TilemapYoko_33: -1499011248350464635
+      00TilemapYoko_51: 7838431883086598222
+      00TilemapYoko_30: 3911151417178722699
+      00TilemapYoko_45: 1180465573285755394
+      00TilemapYoko_48: 5531104868050473652
+      00TilemapYoko_49: 5514840754087241540
+      00TilemapYoko_6: 1993954754361709299
+      00TilemapYoko_15: 2676781862639748048
+      00TilemapYoko_7: -81285168213514244
+      00TilemapYoko_14: -8605967619925077830
+      00TilemapYoko_35: 6058662541985490730
+      00TilemapYoko_5: 2541491309183898815
+      00TilemapYoko_8: 9200319862320641299
+      00TilemapYoko_19: 5743100693379268251
+      00TilemapYoko_53: 4385299544195785715
+      00TilemapYoko_46: -6382220986974581282
+      00TilemapYoko_27: 2217394390933083953
+      00TilemapYoko_11: 1256787269252920520
+      00TilemapYoko_4: 4780639015145174638
+      00TilemapYoko_59: 1882496365428403385
+      00TilemapYoko_25: -1100819260482877816
+      00TilemapYoko_9: -807240424009665756
+      00TilemapYoko_24: 2936484527257187164
+      00TilemapYoko_37: -3749774445841843243
+      00TilemapYoko_43: -6716598093298973243
+      00TilemapYoko_41: 4170556507222541402
+      00TilemapYoko_42: 8076965469532874224
+      00TilemapYoko_47: 6947241041160429268
+      00TilemapYoko_38: -4835417014583038700
+      00TilemapYoko_28: -7219705636911057813
+      00TilemapYoko_12: -771686156759155271
+      00TilemapYoko_16: -5974757486151975743
+      00TilemapYoko_21: -4985185518163779922
+      00TilemapYoko_55: -2675571097525460826
+      00TilemapYoko_18: 6892837879101992256
+      00TilemapYoko_20: -6756851316932966510
+      00TilemapYoko_23: 1607437209335122565
+      00TilemapYoko_31: -1830985363455536185
+      00TilemapYoko_2: 4821305334786066777
+      00TilemapYoko_61: -8282889238105479048
+      00TilemapYoko_13: -8576257216674402310
+      00TilemapYoko_52: -6964934048110535124
+      00TilemapYoko_36: 1731553227185258584
+      00TilemapYoko_40: -7751831112967436805
+      00TilemapYoko_29: -1406345343847669101
+      00TilemapYoko_58: -8700289789803038136
+      00TilemapYoko_57: 1524531210839132162
+      00TilemapYoko_26: -66031670573682098
+      00TilemapYoko_3: -7665766352911822439
+      00TilemapYoko_0: 2990545544022853041
+      00TilemapYoko_34: -1631122232679406958
+      00TilemapYoko_1: 5143512785980903368
+      00TilemapYoko_22: 426466232423993439
+      00TilemapYoko_54: -2218878238207787839
+      00TilemapYoko_17: -5209160953728838430
+      00TilemapYoko_10: 332002292758276770
+      00TilemapYoko_60: -6057020764383095384
+      00TilemapYoko_44: 6662821640263189344
+      00TilemapYoko_50: -6182895576703598823
+      00TilemapYoko_32: -7843754930513164253
+      00TilemapYoko_56: -8280160971622072842
+      00TilemapYoko_39: -6185712692610355484
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

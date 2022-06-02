@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class YokoMove : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class YokoMove : MonoBehaviour
                     entity.CheckRaycast();
                 }
             }
+            if (allYokos.Count == 0) SceneManager.LoadScene("Menu");
         }
     }
     public void RemoveEntity(EntityRaycast entity)
